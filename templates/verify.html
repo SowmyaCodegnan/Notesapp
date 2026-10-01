@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+
+{%block content %}
+    <p>verification page</p>
+
+    {{info}}
+    
+    <form method="POST">
+
+        <label for="otp">Enter the otp: </label>
+        <input type="text" name="otp">
+
+        <input type="submit" value="verify">
+    </form>
+{% endblock %}

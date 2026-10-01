@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-container">
+<h1>My Notes</h1>
+<p>Manage your notes easily</p>
+
+<div class="notes-grid">
+
+    {% if notes %}
+
+        {% for i in notes %}
+
+            <div class="note-box">
+
+                <div class="note-header">
+
+                    <span class="note-date">
+                        {{ i['created_at'] if i.get('created_at') else '' }}
+                    </span>
+
+                    <div class="note-actions">
+                        <a href="/editnote/{{ i['id'] }}" class="edit-btn">✏️</a>
+                        <a href="/deletenote/{{ i['id'] }}"
+                           class="delete-btn"
+                           onclick="return confirm('Are you sure you want to delete this note?')">
+                            🗑️
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="note-content">
+                    {{ i['content'] }}
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="note-box">
+            <div class="note-content">
+                No notes available
+            </div>
+        </div>
+
+    {% endif %}
+
+    <!-- Add New Note Box -->
+    <div class="note-box add-new"
+         onclick="document.getElementById('note').focus()">
+        +
+    </div>
+
+</div>
+
+<div class="new-note-form">
+
+    <form method="post" action="/createnote">
+
+        <label for="note">Create a new note:</label>
+
+        <textarea
+            id="note"
+            name="note"
+            placeholder="Write your note here..."
+            required></textarea>
+
+        <button type="submit">
+            Add Note
+        </button>
+
+    </form>
+
+</div>
+
+
+</div>
+
+{% endblock %}

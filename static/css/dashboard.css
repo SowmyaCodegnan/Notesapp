@@ -1,0 +1,128 @@
+.dashboard-container {
+max-width: 900px;
+margin: 2rem auto;
+padding: 2rem;
+background: #ffffff;
+border-radius: 12px;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+
+.dashboard-container h1 {
+color: #004080;
+font-size: 2rem;
+margin-bottom: 0.5rem;
+}
+
+.dashboard-container p {
+font-size: 1.1rem;
+color: #444;
+margin-bottom: 2rem;
+}
+
+.notes-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 1.5rem;
+}
+
+.note-box {
+background-color: #f9f9f9;
+padding: 1rem;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+text-align: left;
+position: relative;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note-box:hover {
+transform: translateY(-5px);
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.note-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 0.5rem;
+}
+
+.note-date {
+font-size: 0.85rem;
+color: #777;
+}
+
+.note-actions {
+display: flex;
+gap: 0.5rem;
+}
+
+.edit-btn,
+.delete-btn {
+text-decoration: none;
+font-size: 1.1rem;
+transition: color 0.2s ease;
+}
+
+.edit-btn:hover {
+color: #007bff;
+}
+
+.delete-btn:hover {
+color: #d9534f;
+}
+
+.note-content {
+font-size: 1rem;
+color: #333;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+
+.note-box.add-new {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #e6f0ff;
+color: #004080;
+font-size: 3rem;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.note-box.add-new:hover {
+background-color: #cce0ff;
+}
+
+.new-note-form {
+margin-top: 2rem;
+text-align: left;
+}
+
+.new-note-form textarea {
+width: 100%;
+padding: 1rem;
+border-radius: 8px;
+border: 1px solid #ccc;
+resize: vertical;
+font-size: 1rem;
+margin-bottom: 1rem;
+box-sizing: border-box;
+min-height: 120px;
+}
+
+.new-note-form button {
+background-color: #004080;
+color: white;
+padding: 0.6rem 1.2rem;
+border: none;
+border-radius: 6px;
+font-size: 1rem;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}
+
+.new-note-form button:hover {
+background-color: #003366;
+}

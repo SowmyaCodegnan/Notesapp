@@ -1,0 +1,60 @@
+.edit-note-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  .edit-note-container h2 {
+    text-align: center;
+    color: #004080;
+    margin-bottom: 1.5rem;
+  }
+  
+  .edit-note-container textarea {
+    width: 93%;
+    min-height: 200px;
+    resize: vertical;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .save-btn,
+  .cancel-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s ease;
+  }
+  
+  .save-btn {
+    background-color: #007bff;
+  }
+  
+  .save-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .cancel-btn {
+    background-color: #6c757d;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #5a6268;
+  }
+  
